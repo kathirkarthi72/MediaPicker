@@ -9,13 +9,13 @@ import Foundation
 import UIKit
 
 // MARK: Typealias
-typealias ImageCompletionHandler = (_ image: UIImage?) -> ()
+public typealias ImageCompletionHandler = (_ image: UIImage?) -> ()
 
-typealias CompletionHandler = () -> ()
-typealias FailureHandler = (_ errorLog: String?) -> ()
+public typealias CompletionHandler = () -> ()
+public typealias FailureHandler = (_ errorLog: String?) -> ()
 
 /// Media manager. Download and save in Document directory
-struct MediaManager {
+public struct MediaManager {
     
     /// Shared instance
     static let shared: MediaManager = {
@@ -122,7 +122,7 @@ extension MediaManager {
     ///   - url: url
     ///   - completion: download image
     ///   - failure: failure
-    func downloadImage(url: URL,
+    public func downloadImage(url: URL,
                        completion: @escaping ImageCompletionHandler,
                        failure: @escaping FailureHandler) {
         
