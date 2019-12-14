@@ -18,7 +18,7 @@ public typealias FailureHandler = (_ errorLog: String?) -> ()
 public struct MediaManager {
     
     /// Shared instance
-    static let shared: MediaManager = {
+    public static let shared: MediaManager = {
         let mediaManager = MediaManager()
         createDirectory()
         return mediaManager
