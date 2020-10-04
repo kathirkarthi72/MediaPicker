@@ -11,9 +11,9 @@ import Photos
 
 /// Picked Image
 public struct PickedImage {
-    var image: UIImage?
-    var filePath: URL?
-    var api: String?
+    public var image: UIImage?
+    public var filePath: URL?
+    public var api: String?
 }
 
 /// Image picker
