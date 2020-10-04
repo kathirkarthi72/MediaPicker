@@ -21,7 +21,7 @@ open class ImagePicker: NSObject {
     
     typealias ImagePickerHandler = ((_ selected: PickedImage) -> ())
     
-    static let shared: ImagePicker = ImagePicker()
+    public static let shared: ImagePicker = ImagePicker()
     
     private weak var presentationController: UIViewController?
     
