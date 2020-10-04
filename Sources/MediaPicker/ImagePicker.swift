@@ -19,7 +19,7 @@ public struct PickedImage {
 /// Image picker
 open class ImagePicker: NSObject {
     
-    typealias ImagePickerHandler = ((_ selected: PickedImage) -> ())
+    public typealias ImagePickerHandler = ((_ selected: PickedImage) -> ())
     
     public static let shared: ImagePicker = ImagePicker()
     
@@ -27,7 +27,7 @@ open class ImagePicker: NSObject {
     
     let pickerController: UIImagePickerController = UIImagePickerController()
     
-    var apiKey: String?
+    public var apiKey: String?
     
     private var handler: ImagePickerHandler? = nil
     
@@ -103,7 +103,7 @@ open class ImagePicker: NSObject {
     
     /// Present source view
     /// - Parameter sourceView: view
-    func present(presentationController: UIViewController, completed: ImagePickerHandler? = nil) {
+    public func present(presentationController: UIViewController, completed: ImagePickerHandler? = nil) {
         
         self.handler = completed
         
